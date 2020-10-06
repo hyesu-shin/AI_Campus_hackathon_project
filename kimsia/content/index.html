@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="d3/d3.v3.min.js"></script>
+    <title>안 만날 수 없는 사이</title>
+</head>
+<body>
+    <div class = "container">
+        <div id = "container">
+            <div class = "left">
+                <div class = "header">
+                </div>
+                <div class = "left_content">
+                    <div id="videos">
+                        <video id="localVideo" autoplay muted playsinline></video>
+                        <video id="remoteVideo" autoplay playsinline></video>
+                    </div>
+                </div>
+            </div>
+            <div class = "right">
+                <div class = "header">
+                    <p>안 만날 수 없는 사이</p>
+                </div>
+                <div class = "right_content">
+                    <div id="tab1" class="tabcontent" style="display: block;"><img src="data/room.png" class = "map"></div>
+                    <div id="tab2" class="tabcontent" style="display: none;"><div class = "map" id="map1"></div></div>
+                    <div id="tab3" class="tabcontent" style="display: none;"><div class = "map" id="map2"></div></div>
+                    <div id="tab4" class="tabcontent" style="display: none;"><div class = "map" id="map3"></div></div>
+                    <div id="tab5" class="tabcontent" style="display: none;"><div class = "map" id="map4"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class = "btn">
+        <button class="tab active" onclick="openTab(event, 'tab1')">Home</button>
+        <button class="tab" onclick="openTab(event, 'tab2')">Park</button>
+        <button class="tab" onclick="openTab(event, 'tab3')">Hotel</button>
+        <button class="tab" onclick="openTab(event, 'tab4')">Car theater</button>
+        <button class="tab" onclick="openTab(event, 'tab5')">Drive-thru</button>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=	ae607da81e936efd7cd07a48a54020f5&libraries=services"></script>
+    <script src="js/main.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>
